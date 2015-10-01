@@ -20,6 +20,8 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+	- App\Models\ArticleModel
+	- App\Components\IArticleControlFactory
 
 extensions:
 	dibi: Dibi\Bridges\Nette\DibiExtension22
