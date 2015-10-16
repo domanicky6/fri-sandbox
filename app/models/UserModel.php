@@ -25,7 +25,7 @@ class UserModel extends \Nette\Object {
      * @param array|\DibiRow $user
      * @return bool
      */
-    public function save($user) {
+    public function save(&$user) {
         if (!isset($user['id'])) {
             $temp = $user['heslo'];
             $tempRemember = $user['remember'];
@@ -43,5 +43,7 @@ class UserModel extends \Nette\Object {
 
         return $this->database->getAffectedRows() == 1;
     }
+
+    
 
 }
